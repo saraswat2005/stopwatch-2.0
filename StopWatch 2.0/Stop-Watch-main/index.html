@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Stopwatch</title>
+</head>
+<body>
+    <h1 class="heading">Stopwatch</h1>
+    <div class="container border_radius">
+        <div class="timer_box border_radius">
+            <div class="minute time border_radius">00</div>:
+            <div class="second time border_radius">00</div>.
+            <div class="one_hunderth_second time border_radius">00</div>
+        </div>
+        <div class="buttons">
+            <button class="btn reset border_radius" onclick="reset_value()">Reset</button>
+            <button class="btn start border_radius" onclick="change_value()">Start</button>
+        </div>
+    </div>
+    <div class="lapbox">
+        <div class="headings">
+            <h2>Lap</h2>
+            <h2>Lap Time</h2>
+            <h2>Total Time</h2>
+        </div>
+        <div class="laps"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

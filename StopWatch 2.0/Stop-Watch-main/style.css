@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, #1e1e1e, #121212);
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.heading {
+    color: #00c4ff;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px #00c4ff;
+}
+
+.container {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.timer_box {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 3.5rem;
+    color: #fff;
+    background-color: #333;
+    padding: 15px 30px;
+    border-radius: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.time {
+    background-color: #444;
+    color: #00ff99;
+    padding: 10px 15px;
+    border-radius: 0.5rem;
+}
+
+.btn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 1rem;
+    margin: 10px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(145deg, #333, #1e1e1e);
+    border: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.start { background-color: #00ff99; }
+.start:hover { background-color: #00d17f; }
+
+.reset { background-color: #ff6666; }
+.reset:hover { background-color: #e65555; }
+
+.lapbox {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    margin-top: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s, transform 0.5s ease-in-out;
+    background-color: #2b2b2b;
+    border-radius: 1rem;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.lapbox_open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.headings,
+.lap {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: #ffcc00;
+    background-color: #333;
+    margin-bottom: 5px;
+    border-radius: 0.5rem;
+}
+
+.laps {
+    overflow-y: auto;
+    max-height: 150px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .heading { font-size: 2rem; }
+    .timer_box { font-size: 2rem; padding: 10px; }
+    .btn { font-size: 1.2rem; padding: 8px 15px; }
+}
